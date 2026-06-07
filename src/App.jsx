@@ -5,6 +5,7 @@ import Features from './components/Features';
 import AudioDemo from './components/AudioDemo';
 import Changelog from './components/Changelog';
 import Footer from './components/Footer';
+import Starfield from './components/Starfield';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <Starfield />
       {/* Decorative ambient background glows */}
       <div className="ambient-glow-1"></div>
       <div className="ambient-glow-2"></div>

@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/download/mixifia.apk",
+            "destination": "https://ppvhegjpmhbahnoh.public.blob.vercel-storage.com/mixifia.apk"
+        }
+    ]
+}

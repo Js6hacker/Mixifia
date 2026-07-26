@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/download/mixifia.apk",
-            "destination": "https://ppvhegjpmhbahnoh.public.blob.vercel-storage.com/Mixifia.V2.4.4.apk"
+            "destination": "https://ppvhegjpmhbahnoh.public.blob.vercel-storage.com/Mixifia224.apk"
         }
     ]
 }

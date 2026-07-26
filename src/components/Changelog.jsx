@@ -2,6 +2,35 @@ import React from 'react';
 
 const CHANGELOG_DATA = [
   {
+  version: "2.4.4",
+  date: "2026-07-26",
+  title: "Mixifia — AI Music Mixing Studio",
+  tag: "Major Update",
+  description: "This update introduces a redesigned AI Studio focused entirely on music creation. Enjoy a faster Song Edit engine, new AI-powered editing presets, smoother processing, improved stability, and a more polished user experience across supported Android devices.",
+  features: [
+    "Redesigned AI Studio with a cleaner and faster workflow",
+    "New Smart Song Edit Maker",
+    "New AI Mashup Studio for creating professional mashups",
+    "New Transition Lab with multiple transition styles",
+    "New Song Highlight Maker for creating short viral clips",
+    "Professional Song Edit presets including Slowed + Reverb, Nightcore, Deep Bass Boost, and AI Phonk Drift",
+    "Improved audio processing and mastering quality",
+    "Faster rendering engine with reduced processing time",
+    "Enhanced UI with smoother animations and premium design",
+    "Improved preview generation and export performance"
+  ],
+  fixes: [
+    "Fixed crashes that occurred during Song Edit generation",
+    "Improved rendering stability on low-memory devices",
+    "Fixed export failures for certain audio formats",
+    "Resolved preview playback issues after editing",
+    "Improved FFmpeg processing reliability",
+    "Fixed audio synchronization and transition timing",
+    "Reduced memory usage during rendering",
+    "General bug fixes and performance improvements"
+  ]
+  },
+  {
     version: "2.4.0",
     date: "2026-06-02",
     title: "AI Studio Layout & Video Mixing Upgrade",

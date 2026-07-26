@@ -24,7 +24,7 @@ export default function Hero({ onDownload, downloadCount }) {
             </svg>
             Download Mixifia APK
           </button>
-          <span className="download-info">Requires Android 8+ // Version 2.4.0</span>
+          <span className="download-info">Requires Android 8+ // Version 2.4.4</span>
         </div>
         
         <div className="download-badge">

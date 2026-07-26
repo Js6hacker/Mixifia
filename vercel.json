@@ -1,9 +1,8 @@
 {
-    "redirects": [
+    "rewrites": [
         {
             "source": "/download/mixifia.apk",
-            "destination": "https://ppvhegjpmhbahnoh.public.blob.vercel-storage.com/Mixifia224.apk",
-            "permanent": false
+            "destination": "https://ppvhegjpmhbahnoh.public.blob.vercel-storage.com/Mixifia224.apk"
         }
     ]
 }

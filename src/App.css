@@ -808,6 +808,29 @@ a {
   font-size: 0.8rem;
 }
 
+.release-bullets li.has-emoji {
+  padding-left: 0;
+}
+
+.release-bullets li.has-emoji::before {
+  display: none;
+}
+
+.feature-title {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.feature-sep {
+  color: var(--cyan-primary);
+  font-weight: 600;
+  margin: 0 0.15rem;
+}
+
+.feature-desc {
+  color: var(--text-muted);
+}
+
 .fixes-section {
   margin-top: 1.25rem;
   border-top: 1px solid var(--border-color);

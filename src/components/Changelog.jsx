@@ -2,39 +2,59 @@ import React from 'react';
 
 const CHANGELOG_DATA = [
   {
-  version: "2.4.4",
-  date: "2026-07-26",
-  title: "Mixifia — AI Music Mixing Studio",
-  tag: "Major Update",
-  description: "This update introduces a redesigned AI Studio focused entirely on music creation. Enjoy a faster Song Edit engine, new AI-powered editing presets, smoother processing, improved stability, and a more polished user experience across supported Android devices.",
-  features: [
-    "Redesigned AI Studio with a cleaner and faster workflow",
-    "New Smart Song Edit Maker",
-    "New AI Mashup Studio for creating professional mashups",
-    "New Transition Lab with multiple transition styles",
-    "New Song Highlight Maker for creating short viral clips",
-    "Professional Song Edit presets including Slowed + Reverb, Nightcore, Deep Bass Boost, and AI Phonk Drift",
-    "Improved audio processing and mastering quality",
-    "Faster rendering engine with reduced processing time",
-    "Enhanced UI with smoother animations and premium design",
-    "Improved preview generation and export performance"
-  ],
-  fixes: [
-    "Fixed crashes that occurred during Song Edit generation",
-    "Improved rendering stability on low-memory devices",
-    "Fixed export failures for certain audio formats",
-    "Resolved preview playback issues after editing",
-    "Improved FFmpeg processing reliability",
-    "Fixed audio synchronization and transition timing",
-    "Reduced memory usage during rendering",
-    "General bug fixes and performance improvements"
-  ]
+    version: "2.5.0",
+    date: "2026-09-13",
+    title: "Mixifia Aether — Next-Gen AI Mixing & Video Remix Studio",
+    tag: "Latest Release",
+    description: "A refined Mixifia experience with a new UI, smoother workflows, improved stability, and important bug fixes. More intelligent music creation is on the way, with AI Mix Finder coming in the next update.",
+    features: [
+      "🎧 Smarter Music Mixing — Improved song selection, structure detection, BPM/key matching, and smoother transitions.",
+      "🌊 Seamless Transitions — Better cut points and energy flow so transitions feel more natural.",
+      "🎵 Smart Background Flow — Optionally add a BGM that stays subtle during the mix and rises during transitions.",
+      "🎬 AI Video Remix — Remix your music to match your video with improved audio/video processing.",
+      "🎙️ Voice Watermark — Add a custom spoken watermark that plays at the end of your finished mix.",
+      "⚡ Faster & More Reliable — Improved rendering stability and export handling.",
+      "✨ Refined Experience — Cleaner interface and smoother studio workflow."
+    ],
+    fixes: [
+      "Fixed database issues",
+      "Fixed backend problems"
+    ]
+  },
+  {
+    version: "2.4.4",
+    date: "2026-07-26",
+    title: "Mixifia — AI Music Mixing Studio",
+    tag: "Major Update",
+    description: "This update introduces a redesigned AI Studio focused entirely on music creation. Enjoy a faster Song Edit engine, new AI-powered editing presets, smoother processing, improved stability, and a more polished user experience across supported Android devices.",
+    features: [
+      "Redesigned AI Studio with a cleaner and faster workflow",
+      "New Smart Song Edit Maker",
+      "New AI Mashup Studio for creating professional mashups",
+      "New Transition Lab with multiple transition styles",
+      "New Song Highlight Maker for creating short viral clips",
+      "Professional Song Edit presets including Slowed + Reverb, Nightcore, Deep Bass Boost, and AI Phonk Drift",
+      "Improved audio processing and mastering quality",
+      "Faster rendering engine with reduced processing time",
+      "Enhanced UI with smoother animations and premium design",
+      "Improved preview generation and export performance"
+    ],
+    fixes: [
+      "Fixed crashes that occurred during Song Edit generation",
+      "Improved rendering stability on low-memory devices",
+      "Fixed export failures for certain audio formats",
+      "Resolved preview playback issues after editing",
+      "Improved FFmpeg processing reliability",
+      "Fixed audio synchronization and transition timing",
+      "Reduced memory usage during rendering",
+      "General bug fixes and performance improvements"
+    ]
   },
   {
     version: "2.4.0",
     date: "2026-06-02",
     title: "AI Studio Layout & Video Mixing Upgrade",
-    tag: "Latest Release",
+    tag: "Feature Release",
     description: "This major release upgrades the AI Studio, allowing you to combine photo and video inputs into a single rendering timeline. We've introduced a brand new beatsync visual model that analyzes video frames to align dramatic transitions with audio beats.",
     features: [
       "Hybrid AI Photo & Video Mix editor",
@@ -81,8 +101,8 @@ const CHANGELOG_DATA = [
 const ROADMAP_ITEMS = [
   { title: "CapCut-Style AI Editing Engine", tag: "Major Core Upgrade" },
   { title: "Trending & Viral Templates", tag: "Social Boost" },
-  { title: "AI Voice Watermarks", tag: "Creator Rights" },
-  { title: "Advanced Music Transitions", tag: "DSP Upgrade" },
+  { title: "AI Stem Separation & Vocals", tag: "Audio Engine" },
+  { title: "Multi-Track Cloud Sync", tag: "Cloud Integration" },
   { title: "Viral Reel & Short Optimization", tag: "Pacing Sync" },
   { title: "AI Visual Effects Engine", tag: "Filters & VHS" },
   { title: "Smart Highlight Detection", tag: "Action Scanning" },
@@ -119,9 +139,20 @@ export default function Changelog() {
               
               {release.features && release.features.length > 0 && (
                 <ul className="release-bullets">
-                  {release.features.map((feature, fIdx) => (
-                    <li key={fIdx}>{feature}</li>
-                  ))}
+                  {release.features.map((feature, fIdx) => {
+                    const parts = feature.split(' — ');
+                    const hasEmoji = /^[\p{Emoji}\p{Extended_Pictographic}]/u.test(feature.trim());
+                    if (parts.length === 2) {
+                      return (
+                        <li key={fIdx} className={hasEmoji ? 'has-emoji' : ''}>
+                          <span className="feature-title">{parts[0]}</span>
+                          <span className="feature-sep"> — </span>
+                          <span className="feature-desc">{parts[1]}</span>
+                        </li>
+                      );
+                    }
+                    return <li key={fIdx}>{feature}</li>;
+                  })}
                 </ul>
               )}
 

@@ -36,7 +36,7 @@ export default function Header({ onDownload, activeView = 'home', onGoHome, onOp
       <div className="nav-container">
         <div className="logo" onClick={handleLogoClick}>
           <div className="logo-icon">M</div>
-          Mixifia
+          Mixifia AI
         </div>
         <ul className="nav-menu">
           <li><span className="nav-link" onClick={() => handleNavClick('features')}>Features</span></li>

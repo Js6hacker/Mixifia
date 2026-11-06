@@ -49,10 +49,8 @@ function App() {
   };
 
   const handleDownload = () => {
-    // 1. Increment local UI count for responsive feedback
     setDownloadCount(prev => prev + 1);
 
-    // 2. Open the official download path directly
     window.location.href = 'https://mixifia.aicentralstore.com/download/mixifia.apk';
   };
 
